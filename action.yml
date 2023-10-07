@@ -15,5 +15,5 @@ inputs:
 runs:
   using: "composite"
   steps:
-    - run: goliothctl dfu artifact create provision ${{ inputs.file }} --version ${{ inputs.version }}
+    - run: goliothctl dfu artifact create ${{ inputs.file }} --version ${{ inputs.version }}
       shell: bash
