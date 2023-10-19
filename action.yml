@@ -8,12 +8,12 @@ inputs:
   file:
     description: "File to use for artifact."
     required: true
-  version:
+  artifactVersion:
     description: "Artifact semantic version."
     required: true
 
 runs:
   using: "composite"
   steps:
-    - run: goliothctl dfu artifact create ${{ inputs.file }} --version ${{ inputs.version }}
+    - run: goliothctl dfu artifact create ${{ inputs.file }} --version ${{ inputs.artifactVersion }}
       shell: bash
